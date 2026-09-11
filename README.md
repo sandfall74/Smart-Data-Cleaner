@@ -42,5 +42,5 @@ Asegúrate de tener instalado:
 
 ### 2. Clonar el Repositorio
 ```bash
-git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
-cd tu-repositorio
+git clone https://github.com/sandfall74/Smart-Data-Cleaner.git
+cd Smart-Data-Cleaner
