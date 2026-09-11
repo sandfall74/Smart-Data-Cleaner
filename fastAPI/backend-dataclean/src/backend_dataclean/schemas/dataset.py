@@ -1,4 +1,4 @@
-from pydantic import BaseModel  # type: ignore[import-not-found]
+from pydantic import BaseModel  
 from typing import List, Dict, Any, Optional
 
 # ==============================================================================
@@ -14,6 +14,8 @@ class ColumnDetail(BaseModel):
     missing_count: int
     missing_percentage: float
     unique_values_count: int
+    suggested_type: Optional[str] = None  
+    reason: Optional[str] = None          
 
 class AnalysisResponse(BaseModel):
     filename: str

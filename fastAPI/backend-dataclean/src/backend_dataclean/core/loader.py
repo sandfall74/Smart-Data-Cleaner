@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 import pandas as pd
 
 from backend_dataclean.schemas.dataset import AnalysisResponse, ColumnDetail
-
+from backend_dataclean.core.type_detector import perfilar
 
 # Configuraciones 
 
@@ -251,18 +251,18 @@ def process_file_bytes(file_bytes: bytes, filename: str) -> AnalysisResponse:
     health_score = max(0.0, round((1.0 - (missing_ratio * 0.7 + duplicate_ratio * 0.3)) * 100, 2))
 
     # 4. desglose columna por columna
+    perfil_df = perfilar(df)
     columns_summary = []
-    for col_name in df.columns:
-        missing_in_col = int(df[col_name].isnull().sum())
-        missing_pct = round((missing_in_col / total_rows) * 100, 2) if total_rows > 0 else 0.0
-
+    for _, row in perfil_df.iterrows():
         columns_summary.append(
             ColumnDetail(
-                name=str(col_name),
-                data_type=str(df[col_name].dtype),
-                missing_count=missing_in_col,
-                missing_percentage=missing_pct,
-                unique_values_count=int(df[col_name].nunique()),
+                name=str(row["columna"]),
+                data_type=str(row["dtype_pandas"]),
+                missing_count=int(row["nulos"]),
+                missing_percentage=float(row["porcentaje_nulos"]),
+                unique_values_count=int(row["unicos"]),
+                suggested_type=str(row["tipo"]),  # 
+                reason=str(row["razon"])           
             )
         )
 

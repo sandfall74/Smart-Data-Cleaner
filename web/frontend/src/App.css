@@ -182,3 +182,19 @@
     border-right-color: var(--border);
   }
 }
+
+
+
+
+
+.html2canvas-fallback {
+  --color-neon-card: #0f172a !important;
+  --color-neon-border: #1e293b !important;
+  --color-neon-blue: #00e5ff !important;
+  color: #f8fafc !important;
+  background-color: #020617 !important;
+}
+
+.html2canvas-fallback * {
+  border-color: #1e293b !important;
+}
