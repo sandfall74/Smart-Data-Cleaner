@@ -40,7 +40,29 @@ Asegúrate de tener instalado:
 * **Node.js** (v18.x o superior)
 * **npm** / **yarn** / **pnpm**
 
+## 🚧 Desafíos Pendientes & Roadmap
+
+Buscamos colaboración en las siguientes áreas:
+
+- [ ] **Generación de Gráficos Vectoriales en PDF:** Actualmente los gráficos se exportan como imagen PNG comprimida. Queremos pasar a renderizado vectorial nativo con `@react-pdf/renderer`.
+- [ ] **Soporte para Datasets Grandes:** Optimización del rendimiento al procesar archivos de más de 50k filas.
+
+Si tienes ideas o quieres resolver alguno de estos puntos, ¡te invitamos a abrir un Issue o Pull Request!
+
+---
+
+##  Cómo Contribuir
+
+1. Haz un **Fork** del proyecto.
+2. Crea una rama para tu funcionalidad (`git checkout -b feature/MiContribucion`).
+3. Haz Commit de tus cambios (`git commit -m 'feat: agrega renderizado SVG'`).
+4. Haz Push a la rama (`git push origin feature/MiContribucion`).
+5. Abre un **Pull Request**.
+
 ### 2. Clonar el Repositorio
 ```bash
 git clone https://github.com/sandfall74/Smart-Data-Cleaner.git
-cd Smart-Data-Cleaner
+cd Smart-Data-Cleaner ```
+
+
+
