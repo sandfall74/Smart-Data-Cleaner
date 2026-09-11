@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Zap,
-  FileCode2,
-  Database,
-  ShieldCheck,
+  FileCode2
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import {

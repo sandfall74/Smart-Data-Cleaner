@@ -45,7 +45,7 @@ import {
   type CleanOptions,
 } from "../services/api";
 import { DatasetCharts } from "../components/analytics/DatasetCharts";
-import { pdf, PDFDownloadLink } from "@react-pdf/renderer";
+import { pdf} from "@react-pdf/renderer";
 import { AnalyticsReportPDF } from "../components/analytics/AnalyticseportPDF";
 import { toPng } from "html-to-image";
 
