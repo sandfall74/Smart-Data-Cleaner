@@ -538,7 +538,7 @@ export const AppCleaner: React.FC = () => {
                 )}
               </TabsContent>
 
-              {/* PESTAÑA 3: GRÁFICOS (SOLO VISIBLE AL NORMALIZAR/LIMPIAR) */}
+              {/* PESTAÑA 3: GRÁFICOS  */}
               <TabsContent value="charts" className="space-y-6">
                 {cleanResult && (
                   <>
